@@ -1,0 +1,45 @@
+sns -> third variable with hue parameter
+sns.load_dataset
+sns.scatterplot(x, y, data, hue=col_name, hue_order=list, palette=dict, 
+hue available in most of the sns plots
+
+Relational plots and subplots - relation between two quanti variables
+	height vs weight
+	absences vs final grades
+separate plot per subgroup
+sns.relplot() - scatter or line plot
+subplots in single figure
+sns.relplot(x,y,data,kind,col, row, col_wrap, col_order, row_order     -> plot for each combination
+
+
+customizing scatter plots
+size, style, transparency
+
+relplot = more flexible
+1. size -> quanti or categorical data column use with hue -- shades of color
+2. style -> use with hue
+3. alpha -> emphasizes the density of observations
+
+Relational Line Plots
+track same thing over time
+markers = True, dashes=False
+confidence interval for the mean
+ci = 'sd' std, None, mean(by default)
+
+Count plots and bar plots   categorical plots
+small number of possible values
+catplot -- same as relplot
+
+95% confidence intervals
+sns.catplot(x/y, data, kind(count,bar--mean of quanti variable  ), order=list, col, row, col_order, row_order
+
+Boxplots - distribution of quanti data
+median, spread, skewness, outliers - 
+sns.catplot(x,y,data, kind='box', row, col, col_order, order, sym=''--rm outliers, whis = 2.0(2 * iqr), whis=[5,95] lower 5th and higher 95th
+whiskers = 1.5 * IQR(25th to 75th percentile)
+
+Point plots - catplot
+mean of quanti variable
+xaxis - categorical variable
+easier to see difference using slopes
+sns.catplot(x,y,data,hue, kind='point', join=False, estimator=median if lot of outliers, capsize
