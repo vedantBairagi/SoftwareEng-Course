@@ -1,0 +1,60 @@
+pd.read_sql_query(query, engine) - power of pandas
+
+Advanced Querying - Exploiting table relationships JOINs
+
+SQL fundamentals 
+Removing whitespaces
+TRIM(leading|trailing|both [characters] string)
+SELECT TRIM(
+	LTRIM AND RTRIM - beginning and end spaces respectively
+LPAD(string, len_to_be, char_to_padded)
+RPAD(
+
+Full-Text Search
+Extensions of PL
+LIKE operator 
+to_tsvector(col_name) @@ to_tsquery(pattern)
+FTS - natural lang queries of text data
+Stemming, spelling mistakes, ranking
+Sorted Variants Lexemes
+
+A Fateful Display of a Womanizer And a Mad Scientist who must Outgun a A Shark in Soviet Georgia
+A Awe-Inspiring Epistle of a Student And a Squirrel who must Defeat a Boy in Ancient China
+
+'display':3 'fate':2 'georgia':19 'mad':9 'must':12 'outgun':13 'scientist':10 'shark':16 'soviet':18 'woman':6
+'ancient':18 'awe':3 'awe-inspir':2 'boy':16 'china':19 'defeat':14 'epistl':5 'inspir':4 'must':13 'squirrel':11 'student':8
+
+
+Extending Postgresql
+	User Defined Data Types
+ENUMERATED DATA TYPES ENUM
+CREATE TYPE name AS DT
+pg_type - typname, typcategory
+information_schema.columns - column_name, data_type, udt_name
+
+
+CREATE FUNCTION squared(i integer) RETURNS integer AS $$
+	BEGIN
+		RETURN i*i; 
+	END;
+$$ LANGUAGE plpgsql;
+In sakila :-
+get_customer_balance(cutomer_id, effective_data)
+inventory_held_by_customer(inventory_id)
+inventory_in_stock(inventory_id)
+
+Commonly used extensions
+PostGIS
+PostPic
+fuzzystrmatch
+pg_trgm
+
+pg_available_extensions - select name from
+extname - pg_extension
+CREATE EXTENSION IF NOT EXISTS fuzzystrmatch;
+
+SELECT extname FROM pg_extension
+
+levenshtein - dist between two strings - which is number of edits required for match -- in fuzzystrmatch
+
+pg_trm- trigram  similarity
