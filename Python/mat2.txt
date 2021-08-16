@@ -1,0 +1,42 @@
+automated data analysis pipeline
+plot styles
+plt.style.use(<style_name>)
+style sheets reference
+Seaborn software library - based on matplotlib
+
+Choosing a style -> Dark bgs are discouraged
+colorblind-friendly if colors are important - seaborn-colorblind or tableau-colorblind10
+if printing then use less ink avoid more colors
+if b/w printer use grayscale
+
+
+Saving ur visualizations
+fig.savefig(<filename.png/jpeg/appro extension>)
+png - lossless compression
+jpg - website lossy compression less diskspace and less bandwidth -- quality = 1, 100 avoid above 95
+svg - different elements edited if fig needs to be edited
+-- dpi dots per inch higher number denser the image larger the filesize will be
+size of the fig
+fig.set_size_inches([width, height])
+
+
+flexibly adapt - ease and speed, flexibility, robustness, reproducibility -- Answers to why automate
+
+cartopy
+pandas+matplotlib = seaborn
+seaborn and matplotlib galleries
+
+
+Introduction to seaborn
+	easily create most co
+gather data -> transform and clean <-> explore -> analyze and build models -> communicate results
+
+Advantages -> easy to use, works well with pandas, bulit on matplotlib
+import seaborn as sns Samuel Norman Seaborn
+also import matplotlib
+countplot takes in categorical list
+sns.countplot() -> gives out a bar chart
+When to use type of visualization
+
+Pandas - to analyze data
+
