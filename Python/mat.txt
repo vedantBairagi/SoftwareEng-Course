@@ -1,0 +1,47 @@
+Matplotlib - complete control over the plot properties
+Main object oriented interface - pyplot 
+plt.subplots - figures and axes fig, ax
+ax.plot(x,y)
+
+market in .plot - 'o', 'x', 'v' more matplotlib documentation
+linestyle - '--', None more in matplotlib documentation
+color - 'r','g', 'b' more in documentation
+ax.set_xlabel/ylabel/title and many more
+
+more data - obscure patterns
+small multiples - multiple small plots of similar data - subplots
+fig,ax = plt.subplots() -> one subplot
+fig,ax = plt.sublots(3 rows and 2 columns)
+ax - array of 3 rows and 2 columns
+sharey = True same range of y axis values
+
+Timeseries data
+parse_dates, index_col
+
+time-Series with 
+ax.twinx returns ax
+.tick_params
+
+annotating time series data
+to improve visualizations
+ax.annotate(string of logic/text to shown, xy, xytext, arrowprops {}- arrowstyle, color etc as keys 
+
+bar charts
+ ax.set_xticklabels  rotation
+ax.bar   bottom argument stacked bars medals['gold']+medals['silver']
+
+
+histograms
+ax.hist(Series)
+ histtype = 'step'  , bins
+
+statistical plotting
+	using visu to make comparisons
+adding error bars to bar charts
+yerr = stddev in ax.bar - can take sequence or value in data
+
+boxplots john tukey
+sequence of sequences
+in matplotlib -> red line - median edges of box - 25th and 75th perce
+whiskers
+
